@@ -1,5 +1,4 @@
 const words = ["apple", "grape", "peach", "melon", "berry"];
-const answer = words[Math.floor(Math.random() * words.length)];
 let currentGuess = "";
 let attempts = 0;
 const maxAttempts = 6;
