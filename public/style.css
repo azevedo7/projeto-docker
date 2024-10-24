@@ -9,15 +9,16 @@ body {
 #game-board {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   grid-gap: 10px;
+  padding: 10px;
 }
 
 #game-board > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
   font-size: 24px;
 }
 .correct, .absent, .present{
