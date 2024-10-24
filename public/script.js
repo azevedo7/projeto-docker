@@ -4,9 +4,21 @@ let currentGuess = "";
 let attempts = 0;
 const maxAttempts = 6;
 
+let answer = '';
 const gameBoard = document.getElementById("game-board");
 const guessInput = document.getElementById("guess-input");
 const submitGuessBtn = document.getElementById("submit-guess");
+
+function fetchWord() {
+    fetch("/random-word")
+        .then(response => response.json())
+        .then(data => {
+            answer = data.word.trim().toLowerCase();
+        })
+        .catch(error => console.log(error));
+};
+
+fetchWord();
 
 function checkGuess() {
   if (currentGuess.length !== 5) {
