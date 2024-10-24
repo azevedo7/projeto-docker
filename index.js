@@ -14,7 +14,7 @@ const words = fs.readFileSync(path.join(__dirname, 'words.txt'), 'utf8').split('
 
 app.get('/random-word', (req, res) => {
     const randomWord = words[Math.floor(Math.random() * words.length)];
-    res.send(randomWord);
+    res.json({ word: randomWord});
 });
 
 app.listen(port, () => {
