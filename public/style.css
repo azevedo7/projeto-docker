@@ -13,7 +13,14 @@ body {
   grid-gap: 10px;
 }
 
-#game-board div {
+#game-board > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  font-size: 24px;
+}
+.correct, .absent, .present{
   width: 50px;
   height: 50px;
   display: flex;
