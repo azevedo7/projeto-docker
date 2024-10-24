@@ -10,7 +10,7 @@ const submitGuessBtn = document.getElementById("submit-guess");
 
 function fetchWord() {
     fetch("/random-word")
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             answer = data.word.trim().toLowerCase();
         })
