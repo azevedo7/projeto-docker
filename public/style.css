@@ -7,8 +7,9 @@ body {
 }
 
 #game-board {
-  display: grid;
-  grid-template-columns: repeat(5, 50px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   grid-gap: 10px;
 }
 
