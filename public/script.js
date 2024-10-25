@@ -20,15 +20,15 @@ function fetchWord() {
 fetchWord();
 
 function checkGuess() {
-  if (currentGuess.length !== 5) {
-    alert("Please enter a 5-letter word.");
+  if (currentGuess.length !== 6) {
+    alert("Please enter a 6-letter word.");
     return;
   }
 
   attempts++;
   const resultRow = document.createElement("div");
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const letter = document.createElement("div");
     letter.innerText = currentGuess[i];
 
